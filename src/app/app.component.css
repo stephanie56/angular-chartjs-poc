@@ -1,11 +1,3 @@
 p {
   font-family: Lato;
 }
-
-.customLegend li span {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin-right: 5px;
-    border-radius: 25px;
-}

@@ -20,9 +20,9 @@ export class AppComponent  {
       data: {
         datasets: [{
           label: 'Data Set 1',
-          backgroundColor: "rgba(0, 0, 0, 0)",
+          backgroundColor: "rgb(29, 74, 147)",
           borderColor: "rgb(29, 74, 147)",
-          fill: true,
+          fill: false,
           lineTension: 0,
           data: [
             { x: 200, y: 2 },
@@ -37,9 +37,9 @@ export class AppComponent  {
         },
         {
           label: 'Data Set 2',
-          backgroundColor: "rgba(0, 0, 0, 0)",
+          backgroundColor: "rgb(0, 173, 188)",
           borderColor: "rgb(0, 173, 188)",
-          fill: true,
+          fill: false,
           lineTension: 0,
           data: [
             { x: 200, y: 3 },
@@ -47,8 +47,8 @@ export class AppComponent  {
             { x: 2000, y: 5 },
             { x: 3000, y: 5.8 },
             { x: 4000, y: 4 },
-            { x: 5000, y: 5.4 },
-            { x: 6000, y: 8.4 },
+            { x: 5000, y: 4.7 },
+            { x: 6000, y: 8 },
             { x: 7000, y: 5 },
           ],
         }]
@@ -61,6 +61,19 @@ export class AppComponent  {
               fontColor: '#333',
               boxWidth: 4,
               fillStyle: '#333',
+            }
+        },
+        tooltips: {
+          backgroundColor: "rgba(255, 255, 255)",
+          bodyFontColor: "#333",
+          borderColor: "#333",
+          titleFontColor: "#333",
+          borderWidth: 1,
+          cornerRadius: 1,
+          callbacks: {
+              label: function(tooltipItem) {
+                  return ` ${Number(tooltipItem.yLabel)} m/s`;
+              }
             }
         },
         responsive: true,

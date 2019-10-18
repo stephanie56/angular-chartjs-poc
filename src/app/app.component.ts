@@ -70,11 +70,22 @@ export class AppComponent  {
           titleFontColor: "#333",
           borderWidth: 1,
           cornerRadius: 1,
+          caretPadding: 12,
+          xPadding: 8,
+          yPadding: 8,
+          bodySpacing: 8,
+          mode: 'index',
+          intersect: false,
+          position: 'nearest',
           callbacks: {
-              label: function(tooltipItem) {
-                  return ` ${Number(tooltipItem.yLabel)} m/s`;
+              label: function (t, d) {
+                  if (t.datasetIndex === 0) {
+                      return `${t.yLabel} m/s`;
+                  } else if (t.datasetIndex === 1) {
+                      return `${t.yLabel} m/s`;
+                  }
               }
-            }
+          }
         },
         responsive: true,
         title: {

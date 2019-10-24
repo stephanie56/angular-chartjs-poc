@@ -54,6 +54,7 @@ export class AppComponent  {
         }]
       },
       options: {
+        events: ['click'],
         legend: {
           display: true,
             labels: {
